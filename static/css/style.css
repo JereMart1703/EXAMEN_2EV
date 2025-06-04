@@ -1,3 +1,70 @@
+/* Reset y estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Estructura principal con Flexbox para anclar el footer abajo */
 body {
-    background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: blue;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Navigation Menu */
+.nav-horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-horizontal li {
+  margin: 0 10px;
+}
+
+.nav-horizontal a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-horizontal a:hover {
+  background-color: #ddd;
+}
+
+/* Main content */
+.main {
+  flex: 10000; /* Esto empuja el footer hacia abajo si hay poco contenido */
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 15px;
 }
