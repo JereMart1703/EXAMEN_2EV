@@ -71,7 +71,7 @@ def form_add_hospitales(request: Request):
     )
 
 @app.post("/addhospitales")
-def add_hospitales(request: Request, nombre: Annotated[str, Form()] = None):
+def add_hospitales(request: Request, nombre: Annotated[str, Form()]):
     if nombre is None:
         return templates.TemplateResponse(
         request=request, name="formaddartistas.html", context={"hospitales": hospitales}
