@@ -115,3 +115,28 @@
 
 </body>
 </html>
+
+{% extends "default.html" %}
+
+{% block title %} Hospitales {% endblock %}
+
+{% block content %}
+
+
+    <div class="col-sm-9">
+    <h3><small>HOSPITALES</small></h3>
+    <hr>
+    <h1>ELIMINAR HOSPITALES</h1> <br>
+    <form action="{{ url_for('del_hospitales') }}" method="post">
+        <select  name="hospital_id">
+            {% for hospital in hospitales %}  
+                <option value="{{hospital.id}}">{{hospital.nombre}}</option>
+            {% endfor%}
+        </select>
+        <input type="submit" value="Eliminar">
+    </form>
+    <h1>HOSPITAL ELIMINADO</h1>
+</div>
+</div>
+
+{% endblock %}
